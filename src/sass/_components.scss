@@ -2,3 +2,24 @@
     max-width: 1240px;
     margin: 0 auto;
 }
+
+.section-heading {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 2em 0;
+
+    &::before {
+        display: block;
+        content: "";
+        height: 3px;
+        width: 150px;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+        background-color: $davys-grey;
+    }
+}

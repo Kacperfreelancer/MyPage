@@ -82,13 +82,14 @@ img {
 .header {
     position: relative;
     top: 78px;
-    min-height: 60vh;
+    height: 60vh;
     background-image: url(../../dist/img/header-small.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: $cultured;
     font-family: 'Overpass';
+    margin-bottom: calc(2em + 78px);
 
     &-bg {
         position: absolute;
@@ -111,6 +112,19 @@ img {
         &-paragraph {
             font-size: 1.8rem;
             font-weight: 300;
+        }
+    }
+}
+
+.intro {
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+
+        &-img {
+            margin-top: 1em;
         }
     }
 }
