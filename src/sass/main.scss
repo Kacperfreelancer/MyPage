@@ -17,6 +17,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif;
+    min-height: 200vh;
 }
 
 img {
@@ -24,52 +25,92 @@ img {
 }
 
 .navbar {
+    position: fixed;
+    width: 100%;
+    padding: 0 1em;
+    z-index: 1;
+    background-color: $gainsboro;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-logo {
+            width: 50%;
+        }
+
+        &-burger {
+            box-sizing: content-box;
+            align-self: flex-end;
+            padding: 1em;
+            z-index: 999;
+            width: 50px;
+
+            &-icon {
+
+                &::before,
+                &::after,
+                & div {
+                    background-color: $onyx;
+                    box-shadow: 0 0 5px $black-shadow;
+                    content: "";
+                    display: block;
+                    height: 6px;
+                    border-radius: 3px;
+                    margin: 7px 0;
+                    transition: 0.5s;
+                }
+
+                &.active:before {
+                    transform: translateY(12px) rotate(135deg);
+                }
+
+                &.active:after {
+                    transform: translateY(-12px) rotate(-135deg);
+                }
+
+                &.active div {
+                    transform: scale(0);
+                }
+
+            }
+        }
+    }
+}
+
+.header {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
-    background-color: $very-light-grey;
+    top: 78px;
+    min-height: 60vh;
+    background-image: url(../../dist/img/header-small.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $cultured;
+    font-family: 'Overpass';
 
-
-    &__logo {
-        width: 50%;
+    &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $black-shadow;
     }
 
-    &__burger {
-        box-sizing: content-box;
-        align-self: flex-end;
+    &__text {
+        position: absolute;
+        top: 25%;
         padding: 1em;
-        z-index: 999;
-        width: 40px;
 
-        &-icon {
+        &-title {
+            font-size: 3rem;
+        }
 
-            &::before,
-            &::after,
-            & div {
-                background-color: $dark-grey;
-                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-                content: "";
-                display: block;
-                height: 6px;
-                border-radius: 3px;
-                margin: 7px 0;
-                transition: 0.5s;
-            }
-
-            &.active:before {
-                transform: translateY(13px) rotate(137deg);
-            }
-
-            &.active:after {
-                transform: translateY(-13px) rotate(-137deg);
-            }
-
-            &.active div {
-                transform: scale(0);
-            }
-
+        &-paragraph {
+            font-size: 1.8rem;
+            font-weight: 300;
         }
     }
 }
