@@ -48,3 +48,30 @@ const typeMachine = () => {
 }
 
 typeMachine()
+
+// Menu 
+
+const menuEl = document.querySelectorAll('.menu');
+const burger = document.querySelector('.burger');
+const allNavItems = document.querySelectorAll('.nav-item')
+
+const handleMenu = () => {
+    menuEl.forEach(el => {
+        el.classList.toggle('active')
+    })
+
+    handleNavItemsAnimation()
+}
+
+const handleNavItemsAnimation = () => {
+    let delayTime = 0;
+
+    allNavItems.forEach((item) => {
+        item.classList.toggle("nav-items-animation");
+        item.style.animationDelay = `.${delayTime}s`;
+        delayTime++;
+        item.addEventListener('click', handleMenu)
+    });
+};
+
+burger.addEventListener('click', handleMenu)

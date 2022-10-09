@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Overpass:wght@300;600&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/636a3696cc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="dist/css/main.min.css">
 </head>
 
@@ -18,17 +19,26 @@
     <div class="navbar">
         <div class="wrapper">
             <div class="navbar__box">
-                <div class="navbar__box-logo">
+                <div class="navbar__box-logo logo">
                     <img src="dist/img/logo.png" alt="Kaczmarek - Logo">
                 </div>
                 <div class="navbar__box-burger">
-                    <div class="navbar__box-burger-icon">
+                    <div class="navbar__box-burger-icon menu burger">
                         <div></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="menu-mobile menu">
+        <ul class="menu-mobile__box">
+            <li class="menu-mobile__box-item menu nav-item"><a href="#">Oferta</a></li>
+            <li class="menu-mobile__box-item menu nav-item"><a href="#">O mnie</a></li>
+            <li class="menu-mobile__box-item menu nav-item"><a href="#">Kontakt</a></li>
+        </ul>
+    </div>
+
     <div class="header">
         <div class="header-bg"></div>
         <div class="header__text">
@@ -57,6 +67,103 @@
                 <div class="intro__box-img">
                     <img src="dist/img/intro-small.jpg" alt="Laptop z analizami z statystyk">
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="baner">
+        <div class="baner__box">
+            Twoje miejsce w internecie!
+        </div>
+    </div>
+
+    <div class="ofert">
+        <h2 class="section-heading">Oferta</h2>
+        <div class="wrapper">
+            <div class="ofert__box">
+                <div class="ofet__box-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi tempora laborum
+                    dignissimos repellendus reprehenderit hic exercitationem sunt libero dolorum.
+                    <br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, veniam repellendus. Libero amet alias
+                    commodi.
+                    <br><br>
+                    <ol class="ofert__box-text--list">
+                        <li>Korzysc</li>
+                        <li>Korzysc</li>
+                        <li>Korzysc</li>
+                    </ol>
+                    <button class="cta ofert__box-text--button">Napisz do mnie!</button>
+                </div>
+                <div class="ofert__box-img">
+                    <img src="dist/img/ofert-small.jpg"
+                        alt="Stanowisko pracy z laptopem, notatnikiem, telefonem i kawą.">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <h2 class="section-heading">O mnie</h2>
+        <div class="wrapper">
+            <div class="about__box">
+                <div class="about__box-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, hic.
+                    <br><br>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis suscipit ut laboriosam iste
+                    eveniet
+                    libero maxime, nisi, obcaecati cupiditate ducimus possimus dolores? Placeat, fugit assumenda!
+                    <br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolore esse saepe ducimus,
+                    laboriosam
+                    voluptate?
+                    <br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse adipisci dolore consequatur amet
+                    libero
+                    molestiae repudiandae, sit officiis?
+                </div>
+                <div class="about__box-contact">
+                    <h2 class="section-heading">Napisz do mnie!</h2>
+                    <form action="" class="about__box-contact-box">
+                        <div class="group">
+                            <input type="text" required="required" /><span class="highlight"></span><span
+                                class="bar"></span>
+                            <label>Imie</label>
+                        </div>
+                        <div class="group">
+                            <input type="mail" required="required" /><span class="highlight"></span><span
+                                class="bar"></span>
+                            <label>E-mail</label>
+                        </div>
+                        <div class="group">
+                            <textarea type="textarea" required="required"></textarea><span
+                                class="highlight"></span><span class="bar"></span>
+                            <label>Wiadomość</label>
+                        </div>
+                        <input type="submit" class="cta about__box-contact-btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer__box">
+            <div class="footer__box-logo">
+                <img src="dist/img/logo.png" alt="Kaczmarek - Logo">
+            </div>
+            <h2 class="section-heading footer__box-title">Tu mnie znajdziesz!</h2>
+            <div class="footer__box-socials">
+                <a href="https://www.instagram.com/kacperwebdeveloper/"><i
+                        class="fa-brands fa-instagram footer__box-socials-icon"></i></a>
+                <a href="https://www.linkedin.com/in/kacper-kaczmarek-25325224a/"><i
+                        class="fa-brands fa-linkedin footer__box-socials-icon"></i></a>
+                <a href="https://github.com/Kacperfreelancer"><i
+                        class="fa-brands fa-github footer__box-socials-icon"></i></a>
+            </div>
+            <hr>
+            <div class="footer__box-copy">
+                &copy; Kacper Kaczmarek | Wszelkie prawa zastrzeżone
             </div>
         </div>
     </div>
