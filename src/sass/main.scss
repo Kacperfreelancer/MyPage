@@ -169,11 +169,11 @@ img {
     align-items: center;
     padding: 1em;
     height: 200px;
-    background-image: url(../../dist/img/baner-small.jpg);
+    background-image: url(../../dist/img/baner-medium.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin-bottom: 2em;
+    margin: 4em 0;
 
     &__box {
         padding: 3em;
