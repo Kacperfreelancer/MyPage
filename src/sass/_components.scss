@@ -1,5 +1,5 @@
 .wrapper {
-    max-width: 1240px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -56,7 +56,7 @@
 }
 
 hr {
-    width: 100vw;
+    width: 99vw;
 }
 
 textarea {
@@ -72,7 +72,7 @@ input,
 textarea {
     background: none;
     color: $eerie-black;
-    font-size: 18px;
+    font-size: 1.8rem;
     padding: 10px 10px 10px 5px;
     display: block;
     width: 100%;
@@ -87,7 +87,7 @@ textarea {
     &:focus~label,
     &:valid~label {
         top: -14px;
-        font-size: 12px;
+        font-size: 1.2rem;
         color: $onyx;
     }
 
@@ -122,5 +122,35 @@ label {
         background: $onyx;
         transition: .3s ease all;
         left: 0%;
+    }
+}
+
+.casual-link {
+    position: relative;
+    color: $eerie-black;
+    transition: .3s;
+    text-decoration: none;
+    display: inline-block;
+
+
+    &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $onyx;
+        transition: height .3s;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        height: 100%;
+    }
+
+    &:hover {
+        color: $cultured;
     }
 }

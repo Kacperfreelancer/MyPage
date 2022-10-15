@@ -19,13 +19,20 @@
     <div class="navbar">
         <div class="wrapper">
             <div class="navbar__box">
-                <div class="navbar__box-logo logo">
-                    <img src="dist/img/logo.png" alt="Kaczmarek - Logo">
-                </div>
+
+                <img class="navbar__box-logo" src="dist/img/logo.png" alt="Kaczmarek - Logo">
+
                 <div class="navbar__box-burger">
                     <div class="navbar__box-burger-icon menu burger">
                         <div></div>
                     </div>
+                </div>
+                <div class="navbar__box-desktop">
+                    <ul class="navbar__box-desktop-box">
+                        <li class="navbar__box-desktop-box-item"><a href="#Oferta">Oferta</a></li>
+                        <li class="navbar__box-desktop-box-item"><a href="#About">O mnie</a></li>
+                        <li class="navbar__box-desktop-box-item"><a href="#Contact">Kontakt</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -71,17 +78,11 @@
         </div>
     </div>
 
-    <div class="baner">
-        <div class="baner__box">
-            Twoje miejsce w internecie!
-        </div>
-    </div>
-
     <div class="ofert" id="Oferta">
         <h2 class="section-heading">Oferta</h2>
         <div class="wrapper">
             <div class="ofert__box">
-                <div class="ofet__box-text">
+                <div class="ofert__box-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi tempora laborum
                     dignissimos repellendus reprehenderit hic exercitationem sunt libero dolorum.
                     <br><br>
@@ -93,13 +94,19 @@
                         <li>Korzysc</li>
                         <li>Korzysc</li>
                     </ol>
-                    <button class="cta ofert__box-text--button">Napisz do mnie!</button>
+                    <a href="#Contact" class="cta ofert__box-text--button">Napisz do mnie!</a>
                 </div>
                 <div class="ofert__box-img">
                     <img src="dist/img/ofert-small.jpg"
                         alt="Stanowisko pracy z laptopem, notatnikiem, telefonem i kawą.">
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="baner">
+        <div class="baner__box">
+            Twoje miejsce w internecie!
         </div>
     </div>
 
@@ -122,30 +129,45 @@
                     libero
                     molestiae repudiandae, sit officiis?
                 </div>
-                <div class="about__box-contact" id="Contact">
-                    <h2 class="section-heading">Napisz do mnie!</h2>
-                    <form action="" class="about__box-contact-box">
-                        <div class="group">
-                            <input type="text" required="required" /><span class="highlight"></span><span
-                                class="bar"></span>
-                            <label>Imie</label>
-                        </div>
-                        <div class="group">
-                            <input type="mail" required="required" /><span class="highlight"></span><span
-                                class="bar"></span>
-                            <label>E-mail</label>
-                        </div>
-                        <div class="group">
-                            <textarea type="textarea" required="required"></textarea><span
-                                class="highlight"></span><span class="bar"></span>
-                            <label>Wiadomość</label>
-                        </div>
-                        <p>Dane podane w formularzu będą przetwarzane w celu udzielenia odpowiedzi. Jeśli pytanie będzie
-                            odnosiło się do naszych usług, w odpowiedzi możemy przedstawić Ci ofertę.
-                            <a href="politykaprywatnosci.html">Polityka prywatności</a>
-                        </p>
-                        <input type="submit" class="cta about__box-contact-btn">
-                    </form>
+                <div class="about__box-img">
+                    <img src="./dist/img/about-img.jpg" alt="Osoba pracująca na laptopie">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact" id="Contact">
+        <div class="wrapper">
+            <h2 class="section-heading">Napisz do mnie!</h2>
+            <div class="contact__box">
+                <form class="contact__box-form" action="mail.php" method="POST" id="contactform">
+                    <div class="group contact__box-form--input">
+                        <input type="text" name="name" required /><span class="highlight"></span><span
+                            class="bar"></span>
+                        <label>Imie</label>
+                    </div>
+                    <div class="group contact__box-form--input">
+                        <input type="email" name='email' required /><span class="highlight"></span><span
+                            class="bar"></span>
+                        <label>E-mail</label>
+                    </div>
+                    <div class="group contact__box-form--input">
+                        <textarea type="textarea" required name="message"></textarea><span
+                            class="highlight msg-form"></span><span class="bar"></span>
+                        <label>Wiadomość</label>
+                    </div>
+                    <p class="group info-pp contact__box-form--info">Dane podane w formularzu będą przetwarzane w celu
+                        udzielenia
+                        odpowiedzi. Jeśli
+                        pytanie będzie
+                        odnosiło się do naszych usług, w odpowiedzi możemy przedstawić Ci ofertę.
+                        <a class='casual-link' href="politykaprywatnosci.html">Polityka prywatności</a>.
+                    </p>
+                    <input type="submit" class="cta contact__box-form--btn">
+                </form>
+                <div class="contact__box-img">
+                    <img src="./dist/img/contact-small.jpg"
+                        alt="Osoba z telefonem w ręku wypełniająca formularz kontaktowy">
                 </div>
             </div>
         </div>
@@ -172,6 +194,7 @@
         </div>
     </div>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="dist/js/script.min.js"></script>
 </body>
 

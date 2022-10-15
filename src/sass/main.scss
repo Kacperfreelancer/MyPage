@@ -18,26 +18,37 @@ body {
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif;
     min-height: 200vh;
+    overflow-x: hidden;
 }
 
 img {
     max-width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: $onyx
+}
+
 .navbar {
     position: fixed;
     width: 100%;
     padding: 0 1em;
+    height: 78px;
     z-index: 2;
     background-color: $gainsboro;
 
     &__box {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-content: center;
+
+        height: 78px;
 
         &-logo {
+            display: block;
             width: 50%;
+            object-fit: contain;
         }
 
         &-burger {
@@ -74,6 +85,41 @@ img {
                     transform: scale(0);
                 }
 
+            }
+        }
+
+        &-desktop {
+            display: none;
+            width: 40%;
+
+            &-box {
+                height: 100%;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1em;
+
+                &-item {
+
+                    & a {
+                        display: block;
+                        padding: 1em 2em;
+                        text-decoration: none;
+                        color: $onyx;
+                        font-weight: bold;
+                        border-radius: 5px;
+                        text-transform: uppercase;
+                        white-space: nowrap;
+                        transition: background-color .3s, color .3s;
+
+                        &:hover {
+                            background-color: $onyx;
+                            color: $cultured;
+                        }
+                    }
+
+                }
             }
         }
     }
@@ -115,7 +161,7 @@ img {
 .header {
     position: relative;
     top: 78px;
-    height: 60vh;
+    height: 72vh;
     background-image: url(../../dist/img/header-small.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -201,7 +247,9 @@ img {
             }
 
             &--button {
-                display: block;
+                // text-align: center;
+                // width: 50%;
+                display: inline-block;
                 margin: 1em auto;
             }
         }
@@ -220,16 +268,40 @@ img {
         flex-direction: column;
         align-items: center;
 
-        &-contact {
-            width: 90%;
-            margin: 0 auto;
-
-            &-btn {
-                width: 50%;
-                margin: 0 auto;
-            }
+        &-img {
+            margin-top: 1em;
         }
     }
+}
+
+.contact {
+    padding: 1em;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+
+        &-form {
+            width: 100%;
+
+            &--btn {
+                width: 30%;
+                margin: 0 auto;
+            }
+
+            &--info {
+                font-size: 1.2rem;
+            }
+        }
+
+        &-img {
+            margin-top: 1em;
+            width: 100%;
+        }
+    }
+
 }
 
 .footer {
@@ -266,4 +338,180 @@ img {
         }
 
     }
+}
+
+
+// -----------------------------------
+//     MEDIA 
+
+@media (min-width:576px) {
+    .header {
+        &__text {
+            left: 5%;
+
+            &-title {
+                font-size: 4rem;
+            }
+
+            &-paragraph {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+
+@media (min-width:768px) {
+    .section-heading {
+        font-size: 2.6rem;
+    }
+
+    .header {
+        &__text {
+            left: 10%;
+
+            &-title {
+                font-size: 5rem;
+            }
+
+            &-paragraph {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    .navbar__box {
+
+        &-logo {
+            width: 40%;
+        }
+    }
+
+    .intro__box {
+        flex-direction: row;
+        align-items: center;
+
+        &-text {
+            width: 50%;
+            padding-right: 2em;
+            font-size: 1.8rem;
+        }
+
+        &-img {
+            width: 50%;
+        }
+    }
+
+    .baner__box {
+        padding: 3em 8em;
+        font-size: 2rem;
+    }
+
+    .ofert__box {
+        flex-direction: row;
+        align-items: center;
+
+        &-text {
+            width: 50%;
+            padding-left: 2em;
+            font-size: 1.8rem;
+            order: 1;
+        }
+
+        &-img {
+            width: 50%;
+            order: 0;
+        }
+    }
+
+    .about__box {
+        flex-direction: row;
+        align-items: center;
+
+        &-text {
+            width: 50%;
+            font-size: 1.8rem;
+        }
+
+        &-img {
+            width: 50%;
+            padding-left: 1em;
+        }
+    }
+
+    .contact__box {
+        flex-direction: row;
+        align-items: center;
+
+        &-form {
+            padding: 2em;
+            width: 50%;
+            order: 1;
+
+            &--info {
+                font-size: 1.4rem;
+            }
+        }
+
+        &-img {
+            width: 50%;
+            padding-right: 1em;
+            order: 0
+        }
+    }
+
+}
+
+@media (min-width:992px) {
+    .section-heading {
+        font-size: 2.8rem;
+    }
+
+    .header {
+        &__text {
+
+            &-title {
+                font-size: 5.5rem;
+            }
+
+            &-paragraph {
+                font-size: 2.6rem;
+            }
+        }
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .navbar__box {
+        &-logo {
+            width: 30%;
+        }
+
+        &-burger {
+            display: none;
+        }
+
+        &-desktop {
+            display: block;
+        }
+    }
+
+    .header {
+        background-image: url('../../dist/img/header-medium.jpg');
+    }
+
+
+}
+
+@media (min-width:1200px) {
+
+    .navbar__box {
+        &-logo {
+            width: 25%;
+        }
+    }
+
+
 }

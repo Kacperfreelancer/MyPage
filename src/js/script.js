@@ -75,3 +75,21 @@ const handleNavItemsAnimation = () => {
 };
 
 burger.addEventListener('click', handleMenu)
+
+
+//=============================
+// FORM
+
+const sendEmail = () => {
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: "kacperwebdeveloper@gmail.com",
+        Password: "E64F47ADC2773023960E91D72D8B537C389A",
+        To: 'kacperwebdeveloper@gmail.com',
+        From: document.querySelector('.mail-form').value,
+        Subject: "Mail z formularza kontaktowego",
+        Body: `Wiadomość to: ${document.querySelector('.msg-form').value}`
+    }).then(
+        message => alert(message)
+    );
+}
